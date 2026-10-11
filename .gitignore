@@ -1,0 +1,18 @@
+# ROS2编译输出
+/build/
+/install/
+/log/
+
+# vscode工程配置
+/.vscode/
+
+# 临时导出urdf，工作空间根目录下的
+/out.urdf
+/running.urdf
+/test_dump.urdf
+
+# 编辑器临时文件
+*.swp
+*.swo
+.DS_Store
+__pycache__/

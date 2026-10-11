@@ -1,0 +1,164 @@
+colcon.build
+source install/setup.bash
+ros2 launch fishbot_description gazebo_sim.launch.py 
+
+运行后的信息:
+
+aron@jaron-robot:~/chapt6/chapt6_ws$ ros2 launch fishbot_description gazebo_sim.launch.py 
+[INFO] [launch]: All log files can be found below /home/jaron/.ros/log/2026-10-12-00-25-05-290780-jaron-robot-17625
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [17662]
+[INFO] [gzserver-2]: process started with pid [17664]
+[INFO] [gzclient-3]: process started with pid [17666]
+[INFO] [spawn_entity.py-4]: process started with pid [17668]
+[robot_state_publisher-1] [INFO] [1791735905.732043372] [robot_state_publisher]: got segment back_link
+[robot_state_publisher-1] [INFO] [1791735905.732133373] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-1] [INFO] [1791735905.732139314] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1791735905.732143001] [robot_state_publisher]: got segment camera_link
+[robot_state_publisher-1] [INFO] [1791735905.732146488] [robot_state_publisher]: got segment camera_optical_link
+[robot_state_publisher-1] [INFO] [1791735905.732149894] [robot_state_publisher]: got segment front_link
+[robot_state_publisher-1] [INFO] [1791735905.732153270] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-1] [INFO] [1791735905.732156697] [robot_state_publisher]: got segment laser_cylinder_link
+[robot_state_publisher-1] [INFO] [1791735905.732160324] [robot_state_publisher]: got segment laser_link
+[robot_state_publisher-1] [INFO] [1791735905.732163961] [robot_state_publisher]: got segment left_link
+[robot_state_publisher-1] [INFO] [1791735905.732167087] [robot_state_publisher]: got segment right_link
+[gzclient-3] Gazebo multi-robot simulator, version 11.10.2
+[gzclient-3] Copyright (C) 2012 Open Source Robotics Foundation.
+[gzclient-3] Released under the Apache 2 License.
+[gzclient-3] http://gazebosim.org
+[gzclient-3] 
+[gzserver-2] Gazebo multi-robot simulator, version 11.10.2
+[gzserver-2] Copyright (C) 2012 Open Source Robotics Foundation.
+[gzserver-2] Released under the Apache 2 License.
+[gzserver-2] http://gazebosim.org
+[gzserver-2] 
+[spawn_entity.py-4] [INFO] [1791735905.998320330] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-4] [INFO] [1791735905.998642481] [spawn_entity]: Loading entity published on topic /robot_description
+[spawn_entity.py-4] [INFO] [1791735906.000128275] [spawn_entity]: Waiting for entity xml on /robot_description
+[spawn_entity.py-4] [INFO] [1791735906.011837037] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-4] [INFO] [1791735906.012089946] [spawn_entity]: Waiting for service /spawn_entity
+[gzserver-2] [Wrn] [gazebo_ros_init.cpp:178] 
+[gzserver-2] #     # ####### ####### ###  #####  #######
+[gzserver-2] ##    # #     #    #     #  #     # #
+[gzserver-2] # #   # #     #    #     #  #       #
+[gzserver-2] #  #  # #     #    #     #  #       #####
+[gzserver-2] #   # # #     #    #     #  #       #
+[gzserver-2] #    ## #     #    #     #  #     # #
+[gzserver-2] #     # #######    #    ###  #####  #######
+[gzserver-2] 
+[gzserver-2] This version of Gazebo, now called Gazebo classic, reaches end-of-life
+[gzserver-2] in January 2025. Users are highly encouraged to migrate to the new Gazebo
+[gzserver-2] using our migration guides (https://gazebosim.org/docs/latest/gazebo_classic_migration?utm_source=gazebo_ros_pkgs&utm_medium=cli)
+[gzserver-2] 
+[gzserver-2] 
+[spawn_entity.py-4] [INFO] [1791735906.515635080] [spawn_entity]: Calling service /spawn_entity
+[gzserver-2] [Msg] Waiting for master.
+[gzserver-2] [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+[gzserver-2] [Msg] Publicized address: 10.225.177.195
+[gzserver-2] [Msg] Loading world file [/home/jaron/chapt6/chapt6_ws/install/fishbot_description/share/fishbot_description/world/custom_room.world]
+[gzserver-2] [Wrn] [Event.cc:61] Warning: Deleting a connection right after creation. Make sure to save the ConnectionPtr from a Connect call
+[gzserver-2] [INFO] [1791735907.396894944] [depth_camera]: Publishing camera info to [/camera_sensor/camera_info]
+[gzserver-2] [INFO] [1791735907.397526761] [depth_camera]: Publishing depth camera info to [/camera_sensor/depth/camera_info]
+[gzserver-2] [INFO] [1791735907.397828092] [depth_camera]: Publishing pointcloud to [/camera_sensor/points]
+[spawn_entity.py-4] [INFO] [1791735907.483212365] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [fishbot]
+[gzclient-3] [Msg] Waiting for master.
+[gzclient-3] [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+[gzclient-3] [Msg] Publicized address: 10.225.177.195
+[gzclient-3] [Msg] Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+[gzclient-3] [Wrn] [Event.cc:61] Warning: Deleting a connection right after creation. Make sure to save the ConnectionPtr from a Connect call
+[gzserver-2] [INFO] [1791735907.601071650] [gazebo_ros2_control]: Loading gazebo_ros2_control plugin
+[gzserver-2] [INFO] [1791735907.604224002] [gazebo_ros2_control]: Starting gazebo_ros2_control plugin in namespace: /
+[gzserver-2] [INFO] [1791735907.604250984] [gazebo_ros2_control]: Starting gazebo_ros2_control plugin in ros 2 node: gazebo_ros2_control
+[gzserver-2] [INFO] [1791735907.606862601] [gazebo_ros2_control]: connected to service!! robot_state_publisher
+[gzserver-2] [INFO] [1791735907.607293608] [gazebo_ros2_control]: Received urdf from param server, parsing...
+[gzserver-2] [INFO] [1791735907.607325448] [gazebo_ros2_control]: Loading parameter files /home/jaron/chapt6/chapt6_ws/install/fishbot_description/share/fishbot_description/config/fishbot_ros2_controller.yaml
+[gzserver-2] [rcutils|error_handling.c:65] an error string (message, file name, or formatted message) will be truncated
+[gzserver-2] [ERROR] [1791735907.607837157] [gazebo_ros2_control]: parser error Couldn't parse parameter override rule: '--param robot_description:=<?xml version="1.0" ?>
+[gzserver-2] <!-- =================================================================================== -->
+[gzserver-2] <!-- |    This document was autogenerated by xacro from /home/jaron/chapt6/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/fishbot/fishbot.urdf.xacro | -->
+[gzserver-2] <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
+[gzserver-2] <!-- =================================================================================== -->
+[gzserver-2] <robot name="fishbot">
+[gzserver-2]   <!-- 虚拟部件,不存在实体 -->
+[gzserver-2]   <link name="base_footprint"/>
+[gzserver-2]   <link name="base_link">
+[gzserver-2]     <!-- 部件的外观描述 -->
+[gzserver-2]     <visual>
+[gzserver-2]       <!-- 沿着自己几何中心的偏移和旋�, at ./src/rcl/arguments.c:343
+[gzserver-2] 
+[INFO] [spawn_entity.py-4]: process has finished cleanly [pid 17668]
+[INFO] [ros2-5]: process started with pid [17873]
+[ros2-5] [INFO] [1791735908.930111219] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791735918.943976042] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791735918.944595224] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791735928.958100993] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791735928.958717831] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791735938.971905719] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791735938.972321076] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791735948.986543601] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791735948.986911718] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791735959.000475318] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791735959.000774204] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791735969.014022924] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791735969.014579037] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791735979.028508668] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791735979.029068017] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791735989.042761134] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791735989.043059499] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791735999.056078999] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791735999.056416488] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736009.070591276] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736009.071146396] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736019.085232860] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736019.085689064] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736029.099081408] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736029.099634245] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736039.112945151] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736039.113353874] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736049.127454503] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736049.127992912] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736059.141099346] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736059.141640961] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736069.155163531] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736069.155575241] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736079.168800896] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736079.169343864] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736089.182755208] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736089.183230999] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736099.196442030] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736099.196771834] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736109.210553531] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736109.210947126] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736119.224945666] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736119.225407500] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736129.239143966] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736129.239723382] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736139.253476979] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736139.254014746] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736149.267599079] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736149.267991221] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736159.282114175] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736159.282429662] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736169.297182659] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736169.297859589] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736179.312577465] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736179.313085065] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736189.326919741] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736189.327459542] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736199.341122802] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736199.341515936] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736209.356949818] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736209.357331269] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736219.370470369] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+[ros2-5] [INFO] [1791736219.371106072] [_ros2cli_17873]: waiting for service /controller_manager/load_controller to become available...
+[ros2-5] [WARN] [1791736229.384739660] [_ros2cli_17873]: Could not contact service /controller_manager/load_controller
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[robot_state_publisher-1] [INFO] [1791736933.588007715] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[gzclient-3] [Wrn] [Event.cc:61] Warning: Deleting a connection right after creation. Make sure to save the ConnectionPtr from a Connect call
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 17662]
+[ERROR] [ros2-5]: process has died [pid 17873, exit code 2, cmd 'ros2 control load_controller --set-state active fishbot_joint_state_broadcaster'].
+[INFO] [gzclient-3]: process has finished cleanly [pid 17666]
+[gzclient-3] 
+[gzclient-3] 
+[ERROR] [gzserver-2]: process has died [pid 17664, exit code -11, cmd 'gzserver /home/jaron/chapt6/chapt6_ws/install/fishbot_description/share/fishbot_description/world/custom_room.world --verbose -slibgazebo_ros_init.so -slibgazebo_ros_factory.so -slibgazebo_ros_force_system.so'].
+[gzserver-2] 
