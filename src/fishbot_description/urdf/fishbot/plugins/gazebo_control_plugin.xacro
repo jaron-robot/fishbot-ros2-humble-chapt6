@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
-    <xacro:macro name = 'gazebo_control_plugin'>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="gazebo_control_plugin">
         <gazebo>
             <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
                 <ros>
@@ -9,19 +9,15 @@
                     <remapping>odom:=odom</remapping>
                 </ros>
                 <update_rate>30</update_rate>
-
                 <!-- wheels -->
                 <left_joint>left_wheel_joint</left_joint>
                 <right_joint>right_wheel_joint</right_joint>
-
-                <!-- kinematics 运动学设置，控制机器人角速度线速度时需要知道轮子之间的距离和轮子的半径 -->
+                <!-- kinematics -->
                 <wheel_separation>0.2</wheel_separation>
                 <wheel_diameter>0.064</wheel_diameter>
-
-                <!-- limits 轮子的限制 -->
+                <!-- limits -->
                 <max_wheel_torque>20</max_wheel_torque>
                 <max_wheel_acceleration>1.0</max_wheel_acceleration>
-
                 <!-- output -->
                 <publish_odom>true</publish_odom>
                 <publish_odom_tf>true</publish_odom_tf>
@@ -29,8 +25,7 @@
 
                 <odometry_frame>odom</odometry_frame>
                 <robot_base_frame>base_footprint</robot_base_frame>
-
             </plugin>
         </gazebo>
-    </xacro:macro>
+   </xacro:macro>
 </robot>

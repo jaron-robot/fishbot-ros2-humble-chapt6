@@ -1,94 +1,72 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+   <xacro:include filename="$(find fishbot_description)/urdf/fishbot/common_inertia.xacro" />
+    <xacro:macro name="laser_xacro" params="xyz">
+        <gazebo reference="laser_cylinder_link">
+            <material>Gazebo/Black</material>
+        </gazebo>
+        <gazebo reference="laser_link">
+            <material>Gazebo/Black</material>
+        </gazebo>
 
-<xacro:include filename="$(find fishbot_description)/urdf/fishbot/common_inertia.xacro"/>
-
-    <xacro:macro name='laser_xacro' params ='xyz'>
-    
-         <!-- 机器人的laser部件,雷达支撑杆 -->
-        <link name="laser_cylinder_link">   
-            <!-- 部件的外观描述 -->
+        <!-- ============雷达支撑杆================ -->
+        <link name="laser_cylinder_link">
             <visual>
-                <!-- 沿着自己几何中心的偏移和旋转量 -->
-                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-                <!-- 几何形状 -->
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <cylinder radius="0.01" length="0.10"/>
+                    <cylinder length="0.10" radius="0.01" />
                 </geometry>
-                <!-- 材质颜色描述 -->
-                <material name='green'>
-                    <color rgba="0.0 1.0 0.0 0.8"/>
+                <material name="black">
+                    <color rgba="0.0 0.0 0.0 0.8" />
                 </material>
             </visual>
-
             <collision>
-                <!-- 沿着自己几何中心的偏移和旋转量 -->
-                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-                <!-- 几何形状 -->
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <cylinder radius="0.01" length="0.10"/>
+                    <cylinder length="0.10" radius="0.01" />
                 </geometry>
-                <!-- 材质颜色描述 -->
-                <material name='green'>
-                    <color rgba="0.0 1.0 0.0 0.8"/>
-                </material>                
-            </collision>
-            <xacro:cylinder_inertia m='0.05' r='0.01' h='0.10' />
-
-        </link>
-    
-         <!-- 机器人的laser部件,雷达主体 -->
-        <link name="laser_link">   
-            <!-- 部件的外观描述 -->
-            <visual>
-                <!-- 沿着自己几何中心的偏移和旋转量 -->
-                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-                <!-- 几何形状 -->
-                <geometry>
-                    <cylinder radius="0.02" length="0.02"/>
-                </geometry>
-                <!-- 材质颜色描述 -->
-                <material name='green'>
-                    <color rgba="0.0 1.0 0.0 0.8"/>
+                <material name="black">
+                    <color rgba="0.0 0.0 0.0 0.8" />
                 </material>
-            </visual>
-
-            <collision>
-                <!-- 沿着自己几何中心的偏移和旋转量 -->
-                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-                <!-- 几何形状 -->
-                <geometry>
-                    <cylinder radius="0.02" length="0.02"/>
-                </geometry>
-                <!-- 材质颜色描述 -->
-                <material name='green'>
-                    <color rgba="0.0 1.0 0.0 0.8"/>
-                </material>                
             </collision>
-
-            <xacro:cylinder_inertia m='0.10' r='0.02' h='0.02' />
-
+            <xacro:cylinder_inertia m="0.01" r="0.01" h="0.10" />
         </link>
 
-        <!-- 机器人的关节，用于组合机器人的部件 -->
-        <joint name="laser_joint" type="fixed">
-            <parent link="laser_cylinder_link"/>
-            <child link="laser_link"/>
-            <origin xyz="0.0 0.0 0.05"/>
-        </joint>
+
 
         <joint name="laser_cylinder_joint" type="fixed">
-            <parent link="base_link"/>
-            <child link="laser_cylinder_link"/>
-            <origin xyz="${xyz}"/>
+            <parent link="base_link" />
+            <child link="laser_cylinder_link" />
+            <origin xyz="${xyz}" />
         </joint>
+        <!-- ============雷达================ -->
+        <link name="laser_link">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <cylinder length="0.02" radius="0.02" />
+                </geometry>
+                <material name="black">
+                    <color rgba="0.0 0.0 0.0 0.8" />
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <cylinder length="0.02" radius="0.02" />
+                </geometry>
+                <material name="black">
+                    <color rgba="0.0 0.0 0.0 0.8" />
+                </material>
+            </collision>
+            <xacro:cylinder_inertia m="0.03" r="0.02" h="0.02" />
+        </link>
 
-        <gazebo reference='laser_cylinder_link'>
-            <material>Gazebo/Green</material>
-        </gazebo>
-        <gazebo reference='laser_link'>
-            <material>Gazebo/Green</material>
-        </gazebo>
+        <joint name="laser_joint" type="fixed">
+            <parent link="laser_cylinder_link" />
+            <child link="laser_link" />
+            <origin xyz="0 0 0.05" />
+        </joint>
 
     </xacro:macro>
 
